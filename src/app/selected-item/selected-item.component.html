@@ -1,0 +1,35 @@
+<!-- <div class="body" [ngStyle]="{'background-image': 'url(' + selectedFood?.imageUrl + ')'}"> -->
+<div class="body" >
+<div class="container" *ngIf="selectedFood">
+    <div class="imagesection">
+        <img [src]="selectedFood.imageUrl" alt="">
+    </div>
+    <div class="aboutsection">
+        <h2>{{selectedFood.name}}</h2>
+            <div class="price">
+                <p class="price">₹100</p>
+            </div>
+            <div class="cook-time">
+                <p class="cook-time">Cooking Time: 10-20 min</p>
+            </div>
+            <!-- <div>{{selectedFood?.stars}}</div> -->
+            <!-- <div *ngFor="let origin of fd.origins"> -->
+            <div class="area">
+                Origin: {{selectedFood.area}}
+            </div>
+            <div class="instructions">
+                {{selectedFood.instructions}}
+            </div>
+            <div>
+                <button (click)="addtocart()" 
+                    [ngClass]="{'added': isAdded(), 'cartbutton': !isAdded() }">
+                        {{ isAdded() ? 'Added to Cart' : 'Add to Cart' }}
+                </button>
+            </div>
+            <div>
+                <button (click)="goback()" class="backbutton">back</button>
+            </div>
+    </div>
+</div>
+
+</div>

@@ -1,0 +1,6 @@
+<div class="popup-overlay" *ngIf="isVisible || isVisibleforall">
+  <div class="popup-box" *ngIf="isVisible">
+    <p>✅ Order placed successfully!</p>
+    <button (click)="closePopup()">✖</button>
+  </div>
+</div>

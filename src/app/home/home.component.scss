@@ -1,0 +1,208 @@
+
+// ul{
+//     display: flex;
+//     flex-wrap: wrap;
+//     justify-content: center;
+//     align-items: center;
+//     list-style-type: none;
+//     padding: 0 50px;
+// }
+// ul li a{
+//     height: 280px;
+//     width: 220px;
+//     border: 1px solid whitesmoke;
+//     border-radius: 20px;
+//     border-bottom-left-radius: 0;
+//     border-bottom-right-radius: 0;
+//     display: flex;
+//     flex-direction: column;
+//     overflow: hidden;
+//     transition: transform 0.3s ease}
+// ul li a:hover{
+//     transform: scale(1.05);
+// }
+// li{
+//     padding: 10px;
+//     font-size: 10px;
+// }
+// img{
+//    border-top-left-radius: 20px;
+//    border-top-right-radius: 20px;
+//    height: 200px;
+//    object-fit: cover;
+// }
+// .favorite {
+//   color: gray;
+//   font-size: 20px;
+// }
+// .favorite.active {
+//   color: red;
+// }
+// .imagesection{
+//     padding-left: 20px;
+//     padding-top: 5px;
+//     color: black;
+// }
+// .addbutton{
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+// }
+// .cartbutton{
+//     margin-top: 0;
+//     height: 30px;
+//     width: 150px;
+//     border: none;
+//     border-radius: 5px;
+//     background-color: rgb(3, 147, 3);
+//     color: white;
+//     &:hover{
+//         background-color: rgb(1, 100, 1);
+//     }
+// }
+// .added {
+//   background-color: rgb(227, 171, 2); // added state color (yellow)
+//   color: white;
+//   border-radius: 5px;
+//   height: 30px;
+//     width: 150px;
+//      border: none;
+
+//   &:hover {
+//     background-color: rgb(134, 118, 2);
+//   }
+// }
+
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 50px 150px;
+  width: 100%;
+}
+
+.food-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  }
+
+  img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-bottom: 1px solid #f1f1f1;
+  }
+
+  .food-details {
+    padding: 12px;
+
+    h3 {
+      font-size: 16px;
+      margin: 0;
+      font-weight: 600;
+      color: #333;
+
+      /* ellipsis for long names */
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .price {
+      font-size: 14px;
+      font-weight: bold;
+      color: #e53935;
+      margin-top: 4px;
+    }
+
+    .cook-time {
+      font-size: 13px;
+      color: #777;
+      margin: 4px 0 10px;
+    }
+    .area{
+      font-size: 13px;
+    }
+
+    .add-btn {
+      background: #ff6f00;
+      border: none;
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+      width: 100%;
+      transition: background 0.2s ease;
+
+      &:hover {
+        background: #e65100;
+      }
+    }
+  }
+}
+.special-note {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+  font-style: italic;
+  color: #555;
+
+  p {
+    margin: 4px 0;
+  }
+}
+.specialtext{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 58px;
+  color: #e65100;
+  margin-top: 30px;
+  margin-bottom: 10;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+}
+.itemDetails{
+  color: inherit;
+  text-decoration: none;
+  list-style: none;
+}
+.addbutton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cartbutton{
+    margin: 0 25px;
+    height: 30px;
+    width: 150px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(3, 147, 3);
+    color: white;
+    &:hover{
+        background-color: rgb(1, 100, 1);
+    }
+}
+.added {
+  background-color: rgb(227, 171, 2); // added state color (yellow)
+  color: white;
+  border-radius: 5px;
+  height: 30px;
+    width: 150px;
+     border: none;
+     margin: 0 25px;
+
+  &:hover {
+    background-color: rgb(196, 147, 0);;
+  }
+}

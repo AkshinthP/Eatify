@@ -1,0 +1,12 @@
+<div class="body">
+  <div class="category-container">
+    <!-- <h2>Popular Categories</h2> -->
+
+    <div class="categories">
+      <button
+      (click)="onCategoryClick(fd)"
+        [class.active]="fd === selectedCategory"
+         class="category-btn" *ngFor="let fd of food">{{ fd }}</button>
+    </div>
+  </div>
+</div>

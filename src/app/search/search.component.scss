@@ -1,0 +1,116 @@
+
+.searchbar{
+    margin-top: 80px; // equal to header height to prevent overlap
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    height: 500px;
+    background-color: aqua;
+     background-image: url('/assets/head.jpg'); // path to your image
+    background-size: cover;        // cover the container fully
+    background-position: center ;   // center the image
+    background-repeat: no-repeat;  // prevent repeating
+    
+
+    .searchbox {
+        opacity: 0.5;
+    display: flex;
+    box-shadow: 00px 13px 20px rgb(0 0 0 / 70%); // shadow around box
+    border-radius: 30px; // keep rounded corners
+    overflow: hidden;    // make sure shadow follows rounded edges
+  }
+
+    input{
+        height: 50px;
+        width: 350px;
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+        padding-left: 20px;
+        border-right: none;
+        border: 1px solid rgb(130, 126, 126);
+        border-right: none;
+
+        &:focus {
+            outline: none;
+            box-shadow: none;
+            border: 1px solid #ccc; /* keeps a normal border */
+            // border-right: none;
+        }
+
+    }
+    button{
+        height: 50px;
+        width: 80px;
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+        border-left: none;
+        background-color: white;
+        border: 1px solid rgb(130, 126, 126);
+        border-left: none;
+        color: rgb(115, 112, 112);
+    }
+    button:hover{
+        background-color: whitesmoke;
+    }
+}
+
+// .searchbar {
+//   margin-top: 80px; // equal to header height to prevent overlap
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   padding-top: 20px;
+//   padding-bottom: 20px;
+//   width: 100%;
+//   height: 500px;
+//   background-color: aqua;
+//   background-image: url('/assets/head.jpg');
+//   background-size: cover;
+//   background-position: center;
+//   background-repeat: no-repeat;
+
+//   .searchbox {
+//     opacity: 0.5;
+//     display: flex;
+//     box-shadow: 0 13px 20px rgb(0 0 0 / 70%);
+//     border-radius: 30px;
+//     overflow: hidden;
+//   }
+
+//   input {
+//     height: 50px;
+//     width: 350px;
+//     border-top-left-radius: 30px;
+//     border-bottom-left-radius: 30px;
+//     padding-left: 20px;
+//     border: 1px solid rgb(130, 126, 126);
+//     border-right: none;
+
+//     &:focus {
+//       outline: none;
+//       box-shadow: none;
+//       border: 1px solid #ccc;
+//     }
+//   }
+
+//   button {
+//     height: 50px;
+//     width: 80px;
+//     border-top-right-radius: 30px;
+//     border-bottom-right-radius: 30px;
+//     border-left: none;
+//     background-color: white;
+//     border: 1px solid rgb(130, 126, 126);
+//     border-left: none;
+//     color: rgb(115, 112, 112);
+//     cursor: pointer;
+
+//     &:hover {
+//       background-color: whitesmoke;
+//     }
+//   }
+// }

@@ -1,0 +1,5 @@
+<div class="counter-container">
+  <button class="counter-btn" (click)="onDecrease()" [disabled]="quantity <= 1">-</button>
+  <span class="counter-value">{{ quantity }}</span>
+  <button class="counter-btn" (click)="onIncrease()">+</button>
+</div>

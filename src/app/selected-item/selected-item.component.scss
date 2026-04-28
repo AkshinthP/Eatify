@@ -1,0 +1,132 @@
+.body {
+  margin-top: 80px;
+}
+.container{
+    // display: flex;
+    // margin: 30px 300px;
+    // border: 1px solid rgb(166, 165, 165);
+    // padding: 50px;
+    // z-index: 1;
+    
+    position: relative;
+  z-index: 1; // above blurred background
+  display: flex;
+  margin: 50px auto;
+  padding: 40px;
+  max-width: 900px;
+
+  background: rgba(255, 255, 255, 0.6); // white with opacity
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+img{
+    height: 460px;
+    width: 500px;
+}
+.aboutsection{
+    margin-left: 40px;
+    line-height: 30px;
+}
+.cartbutton{
+    margin-top: 40px;
+    height: 30px;
+    width: 150px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(3, 147, 3);
+    color: white;
+
+    &:hover{
+        background-color: rgb(1, 100, 1);
+    }
+}
+.backbutton{
+    margin-top: 20px;
+    height: 30px;
+    width: 150px;
+    border: none;
+    background-color: rgb(201, 0, 0);
+    color: white;
+    border-radius: 5px;
+
+    &:hover{
+        background-color: rgb(157, 1, 1);
+    }
+}
+button.added {
+  background-color: green;
+  color: white;
+}
+button.added {
+//   background-color: rgb(227, 171, 2); // added state color (yellow)
+  margin-top: 40px;
+  background-color: rgb(227, 171, 2); // added state color (yellow)
+  color: white;
+  border-radius: 5px;
+  height: 30px;
+    width: 150px;
+     border: none;
+
+  &:hover {
+    background-color: rgb(134, 118, 2);
+  }
+}
+.instructions{
+    font-size: 10px;
+    line-height: 20px;
+    display: -webkit-box;        /* Flex-like box for webkit browsers */
+    -webkit-line-clamp: 5;       /* Limit to 5 lines */
+  -webkit-box-orient: vertical; /* Vertical orientation */
+  overflow: hidden;            /* Hide overflow */
+  text-overflow: ellipsis;
+}
+.price {
+    font-size: 14px;
+    font-weight: bold;
+    color: #e53935;
+    margin-top: 4px;
+    margin-bottom: 0;
+}
+.cook-time {
+    font-size: 13px;
+    color: #777;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.area{
+    font-size: 13px;
+}
+.body {
+    background-image: url('/assets/head.jpg');
+  position: relative;
+  height: 650px;
+  width: 100%;
+  overflow: hidden;
+  background-size: cover;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: aquamarine;
+    background-size: 76%;
+    // background-position: center;
+    background-repeat: no-repeat;
+    background-image: inherit; // <-- use selectedFood image
+    background-position: 80px 76% ;
+    filter: blur(5px);
+    transform: scale(1.1); // zoom effect
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 150px;
+    // border-bottom: 2px solid black;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    // background:opacity($color: #757575)
+    // opacity: 0.9;
+  }
+}

@@ -1,0 +1,110 @@
+<!-- <div class="body" [ngStyle]="{'background-image': 'url(' + selectedFood?.imageUrl + ')'}"> -->
+<div class="body" >
+<div class="container" >
+
+    <form [formGroup]="form" (ngSubmit)="submitForm()">
+
+    <div class="form-row">
+      <div class="form-name">
+        <label>Name</label>
+        <input type="text" formControlName="name" />
+        <div class="error" *ngIf="form.get('name')?.touched && form.get('name')?.invalid">
+            Name is required
+          </div>
+      </div>
+
+      <div class="form-phone">
+        <label>Phone Number</label>
+        <input type="number" formControlName="phone" />
+        <div class="error" *ngIf="form.get('phone')?.touched && form.get('phone')?.invalid">
+            Enter valid phone number
+          </div>
+      </div>
+    </div>
+
+    <div class="form-address">
+      <label>Address</label>
+      <input type="text" formControlName="address" />
+      <div class="error" *ngIf="form.get('address')?.touched && form.get('address')?.invalid">
+          Address is required
+        </div>
+    </div>
+
+    <div class="form-price">
+      <label>Price</label>
+      <input type="text" formControlName="price" readonly readonly />
+    </div>
+
+    <div class="form-payment">
+      <label>Payment Mode</label>
+      <div class="custom-select" style="width:200px;">
+        <select formControlName="payment">
+          <option value="">Select payment mode:</option>
+          <option value="COD">Cash on Delivery</option>
+          <option value="UPI">UPI</option>
+          <option value="Credit">Credit card</option>
+          <option value="Debit">Debit Card</option>
+        </select>
+      </div>
+      <div class="error" *ngIf="form.get('payment')?.touched && form.get('payment')?.invalid">
+          Select a payment mode
+        </div>
+    </div>
+
+    <div class="btn-section">
+      <button type="submit" class="cartbutton" routerLink="/order">Submit</button>
+      <button type="button" class="backbutton" routerLink="/cart">Back</button>
+    </div>
+
+  </form>
+
+</div>
+</div>
+
+<app-popup></app-popup>
+
+<!-- <form (ngSubmit)="submitForm()" #formRef="ngForm">
+
+   
+      <div class="form-group">
+        <label>Food Name</label>
+        <input type="text" name="name" ngModel required />
+      </div>
+
+     
+      <div class="form-group">
+        <label>Price (₹)</label>
+        <input type="number" name="price" ngModel required />
+      </div>
+
+      
+      <div class="form-group">
+        <label>Cooking Time</label>
+        <input type="text" name="cookTime" ngModel required />
+      </div>
+
+      
+      <div class="form-group">
+        <label>Origin</label>
+        <input type="text" name="origin" ngModel />
+      </div>
+
+    
+      <div class="form-group">
+        <label>Instructions</label>
+        <textarea name="instructions" rows="4" ngModel></textarea>
+      </div>
+
+     
+      <div class="form-group">
+        <label>Image URL</label>
+        <input type="text" name="imageUrl" ngModel required />
+      </div>
+
+    
+      <div class="btn-section">
+        <button type="submit" class="cartbutton">Submit</button>
+        <button type="button" class="backbutton" (click)="goBack()">Back</button>
+      </div>
+
+    </form> -->

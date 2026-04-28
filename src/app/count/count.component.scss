@@ -1,0 +1,35 @@
+.counter-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-right: 30px;
+
+  .counter-btn {
+    width: 32px;
+    height: 32px;
+    border: 1px solid rgb(159, 159, 159);
+    border-radius: 6px;
+    background-color: #0088ff;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+
+    &:hover:not(:disabled) {
+      background-color: #679fdb;
+    }
+
+    &:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+  }
+
+  .counter-value {
+    min-width: 24px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+  }
+}

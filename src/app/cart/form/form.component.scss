@@ -1,0 +1,193 @@
+.body {
+  margin-top: 80px;
+}
+.container{
+    // display: flex;
+    // margin: 30px 300px;
+    // border: 1px solid rgb(166, 165, 165);
+    // padding: 50px;
+    // z-index: 1;
+    
+    position: relative;
+  z-index: 1; // above blurred background
+  display: flex;
+  margin: 50px auto;
+  padding: 40px;
+  max-width: 900px;
+
+  background: rgba(255, 255, 255, 0.6); // white with opacity
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+img{
+    height: 460px;
+    width: 500px;
+}
+
+.area{
+    font-size: 13px;
+}
+.body {
+    background-image: url('/assets/head.jpg');
+  position: relative;
+  height: 650px;
+  width: 100%;
+  overflow: hidden;
+  background-size: cover;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: aquamarine;
+    background-size: 76%;
+    // background-position: center;
+    background-repeat: no-repeat;
+    background-image: inherit; // <-- use selectedFood image
+    background-position: 80px 76% ;
+    filter: blur(5px);
+    transform: scale(1.1); // zoom effect
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 150px;
+    // border-bottom: 2px solid black;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    // background:opacity($color: #757575)
+    // opacity: 0.9;
+  }
+}
+form {
+  width: 100%;
+  background: none;
+  padding: 0;
+  font-family: Arial, sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  opacity: 0.7;
+}
+
+/* LABEL styling */
+label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  font-size: 15px;
+  color: #494848;
+}
+
+/* INPUT and SELECT styling */
+input,
+select {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: 0.2s ease;
+  background-color: white(255, 255, 255, 0.6);;
+}
+
+input:focus,
+select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+/* -------------------------
+   ROW LAYOUT (NAME + PHONE)
+--------------------------*/
+.form-row {
+  display: flex;
+  gap: 20px;
+
+  .form-name,
+  .form-phone {
+    flex: 1; // both take 50% width
+  }
+}
+
+/* -------------------------
+   ADDRESS (DOUBLE WIDTH)
+--------------------------*/
+.form-address input {
+  width: 100%;
+  height: 45px;
+}
+
+/* -------------------------
+   PAYMENT SELECT
+--------------------------*/
+.custom-select select {
+  cursor: pointer;
+}
+
+/* -------------------------
+   BUTTONS
+--------------------------*/
+.btn-section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+
+  button {
+    padding: 10px 25px;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: 0.2s ease;
+  }
+
+  .cartbutton {
+    background: #28a745;
+    color: white;
+    &:hover {
+      background: #218838;
+    }
+  }
+
+  .backbutton {
+    background: #dc3545;
+    color: white;
+    &:hover {
+      background: #c82333;
+    }
+  }
+}
+
+
+/* FADE-IN ANIMATION */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-3px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ERROR MESSAGE */
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+/* RED BORDER ON INVALID INPUTS */
+input.ng-touched.ng-invalid,
+select.ng-touched.ng-invalid {
+  border: 1px solid red !important;
+  box-shadow: 0 0 4px rgba(255, 0, 0, 0.4);
+  animation: fadeIn 0.2s ease-in-out;
+}

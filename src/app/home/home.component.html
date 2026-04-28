@@ -1,0 +1,39 @@
+
+<app-search ></app-search>
+<div class="special-dishes" *ngIf="!searchTerm">
+  <h1 class="specialtext">Special Dishes For You</h1> 
+  <div class="special-note">
+    <p>Experience the finest flavors, crafted with care.</p>
+    <p>Fresh ingredients, authentic taste, unforgettable dining.</p>
+    <p>Your satisfaction is our ultimate priority.</p>
+  </div>
+</div>
+<app-category *ngIf="!searchTerm" (categorySelected)="onCategoryClick($event)"></app-category>
+<!-- <app-category></app-category> -->
+<div class="food-grid" id="search-results" *ngIf="food.length > 0; else noData">
+  <div class="food-card" *ngFor="let fd of food">
+    <a href="" [routerLink]="['/selectditem', fd.id]">
+      <img [src]="fd.imageUrl" alt="{{fd.name}}" />
+    </a>
+    <div class="food-details">
+      <a href="" class="itemDetails" [routerLink]="['/selectditem', fd.id]">
+        <h3>{{ fd.name }}</h3>
+        <p class="price">₹100</p>
+        <p class="area">{{fd.area}}</p>
+        <p class="cook-time">10-20 min</p>
+      </a>
+      <!-- <button  class="add-btn" (click)="toggletocart(fd)">Add to Cart</button> -->
+      <button (click)="toggletocart(fd)" 
+            [ngClass]="{'added': isInCart(fd), 'cartbutton': !isInCart(fd) }">
+            {{ isInCart(fd) ? 'Added to Cart' : 'Add to Cart' }}
+      </button>
+    </div>
+  </div>
+</div>
+
+  <div id="search-results">
+  <ng-template #noData>
+   <app-notfound></app-notfound> 
+  </ng-template>
+</div>
+

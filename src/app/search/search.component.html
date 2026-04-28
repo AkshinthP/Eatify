@@ -1,0 +1,9 @@
+
+<div class="searchbar">
+    <div class="searchbox">
+        <input type="text" placeholder="Search your favorite food" [(ngModel)]="searchTerm" (keyup.enter)="searchClick()" *ngIf="!searchCl">
+        <button (click)="searchClick()"><i class="fa-solid fa-magnifying-glass fa-lg"></i></button>
+    </div>
+</div>
+
+<!-- eth eroor und nookaa -->

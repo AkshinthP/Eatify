@@ -1,0 +1,40 @@
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-section">
+      <h3>Company</h3>
+      <ul>
+        <li *ngFor="let link of quickLinks">
+          <a [href]="link.url">{{ link.label }}</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Locations</h3>
+      <ul>
+        <li *ngFor="let city of locations">{{ city }}</li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a><i class="fab fa-facebook-f"></i></a>
+        <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+        <a href=""><i class="fa-brands fa-instagram"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-section">
+      <h3>Subscribe to our website</h3>
+      <div class="subscribe">
+        <input type="email" [(ngModel)]="subscribeEmail" placeholder="Enter your email">
+        <button (click)="subscribe()">Subscribe</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Eatify Clone. All rights reserved.</p>
+  </div>
+</footer>
